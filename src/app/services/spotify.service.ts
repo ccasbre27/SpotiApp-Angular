@@ -20,4 +20,12 @@ export class SpotifyService {
     return this.http.get('https://api.spotify.com/v1/browse/new-releases', { headers });
   }
 
+  getArtist(artistName: string) {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer yourToken'
+    });
+
+    return this.http.get(`https://api.spotify.com/v1/search?q=${ artistName }&type=artist&limit=15`, { headers });
+  }
+
 }
