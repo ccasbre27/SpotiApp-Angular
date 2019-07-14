@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { ROUTES } from './app.routes';
     HttpClientModule,
     RouterModule.forRoot( ROUTES, { useHash: true } )
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
