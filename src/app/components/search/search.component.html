@@ -4,13 +4,4 @@
     </div>
 </div>
 
-<div class="card-columns m-5">
-
-    <div class="card border border-success" *ngFor="let artist of artists">
-        <img [src]="artist.images | noimage" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{ artist.name }}</h5>
-        </div>
-    </div>
-
-</div>
+<app-cards [items]="artists"></app-cards>
