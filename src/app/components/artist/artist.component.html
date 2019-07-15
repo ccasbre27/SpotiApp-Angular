@@ -9,7 +9,7 @@
         <h3>{{ artist.name }}</h3>
         <h5>{{ artist.followers.total }} <small>followers</small></h5>
         <p>
-            <a [href]="artist.external_urls.spotify" target="_blank">
+            <a [href]="artist.external_urls.spotify" target="_blank" class="text-white">
                 Ir a la página del artista
             </a>
         </p>
@@ -23,5 +23,30 @@
         <button routerLink="/search" class="btn btn-outline-success">
             Regresar
         </button>
+    </div>
+</div>
+
+<div class="row m-5">
+    <div class="col">
+        <table class="table text-white">
+            <thead>
+                <th>Cover</th>
+                <th>Album</th>
+                <th>Song</th>
+                <th>Preview</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let track of topTracks">
+                    <td>
+                        <img [src]="track.album.images | noimage" class="img-thumb">
+                    </td>
+                    <td>{{ track.album.name }}</td>
+                    <td>{{ track.name }}</td>
+                    <td>
+                        <iframe [src]="track.uri | safe_spotify_uri " width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
