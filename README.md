@@ -22,4 +22,4 @@ Artist page: displays information about an artist
 Error page: is displayed when an error occurs
 ![](path/error.png?raw=true)
 
-**Note: It is important to mention that if you want to test it you should get an access token from spotify, I am not sharing my token because it is private information**
+**Note: It is important to mention that if you want to test it you should get an access token from spotify, I am not sharing my token because it is private information. In addition, to set this token you must replace the text "yourToken" in services/spotify.service.ts**
